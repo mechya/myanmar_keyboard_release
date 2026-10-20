@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Myanmar Keyboard — Phonetic (Romanized) Burmese typing for Windows</title>
+<meta name="description" content="Type Burmese anywhere by spelling words the way they sound: mrnmaa → မြန်မာ. A free phonetic (Romanized) Myanmar Unicode keyboard for Windows 10 &amp; 11. Try it right here in your browser." />
+<meta name="keywords" content="Myanmar keyboard, Burmese keyboard, Romanized Burmese, phonetic Myanmar, Myanmar Unicode, Burmese typing, မြန်မာ ကီးဘုတ်, Windows Myanmar keyboard" />
+<link rel="canonical" href="https://mechya.github.io/myanmar_keyboard_release/" />
+<meta name="theme-color" content="#0b1d1f" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mechya.github.io/myanmar_keyboard_release/" />
+<meta property="og:title" content="Myanmar Keyboard — Type Burmese the way it sounds" />
+<meta property="og:description" content="mrnmaa → မြန်မာ. A free phonetic Myanmar Unicode keyboard for Windows." />
+<meta property="og:image" content="https://mechya.github.io/myanmar_keyboard_release/logo.png" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="logo.png" />
+<link rel="apple-touch-icon" href="logo.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Myanmar Keyboard",
+  "alternateName": "Phonetic Burmese Keyboard",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows",
+  "description": "A phonetic (Romanized) Burmese keyboard: spell words the way they sound and get Myanmar Unicode in any app.",
+  "url": "https://mechya.github.io/myanmar_keyboard_release/",
+  "image": "https://mechya.github.io/myanmar_keyboard_release/logo.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<style>
+  :root{
+    --bg:#0b1d1f; --card:#122a2d; --line:#24464a;
+    --text:#eefaf8; --muted:#a3c4c0; --brand:#fecb00; --brand2:#5fd3c4;
+    --good:#34d399; --chip:#1b3a3e;
+    --maxw:1000px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Myanmar Text","Noto Sans Myanmar",Padauk,sans-serif;
+    background:
+      radial-gradient(900px 500px at 12% -8%, rgba(13,148,136,.32) 0%, transparent 55%),
+      radial-gradient(900px 500px at 92% 0%, rgba(254,203,0,.20) 0%, transparent 55%),
+      var(--bg);
+    color:var(--text); line-height:1.55;
+  }
+  .my{font-family:"Myanmar Text","Noto Sans Myanmar",Padauk,sans-serif}
+  a{color:var(--brand2); text-decoration:none}
+  a:hover{text-decoration:underline}
+  :focus-visible{outline:2px solid var(--brand2); outline-offset:3px; border-radius:6px}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+  header{padding:22px 0; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  .brand{display:flex; align-items:center; gap:12px; font-weight:700; font-size:18px; color:var(--text)}
+  .brand:hover{text-decoration:none}
+  .brand img{width:40px; height:40px; border-radius:10px}
+  .brand small{display:block; font-weight:500; font-size:12px; color:var(--muted)}
+  nav{display:flex; gap:18px; flex-wrap:wrap}
+  nav a{color:var(--muted); font-size:15px}
+
+  .hero{padding:40px 0 20px; text-align:center}
+  .hero h1{font-size:clamp(30px,5vw,54px); line-height:1.15; margin:.2em 0 .25em; letter-spacing:-.5px}
+  .hero h1 .accent{color:var(--brand)}
+  .hero p.sub{font-size:clamp(17px,2.4vw,21px); color:var(--muted); max-width:680px; margin:0 auto 26px}
+  .badge{display:inline-block; background:var(--chip); color:var(--brand2); padding:4px 12px; border-radius:999px; font-size:13px; font-weight:600; margin-bottom:14px}
+
+  .cta{display:inline-flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg,#0d9488 0%,#d4a400 100%); color:#fff; font-weight:700;
+       padding:14px 26px; border-radius:12px; font-size:17px; box-shadow:0 10px 30px rgba(13,148,136,.32); border:0; cursor:pointer; font-family:inherit}
+  .cta:hover{text-decoration:none; filter:brightness(1.07)}
+  .cta.secondary{background:transparent; color:var(--text); box-shadow:none; border:1px solid var(--line)}
+  .cta.small{padding:10px 18px; font-size:15px}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+  .tiny{color:var(--muted); font-size:13px; margin-top:12px}
+
+  .try{margin:36px auto 0; max-width:760px; background:var(--card); border:1px solid var(--line);
+       border-radius:16px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,.35); text-align:left}
+  .try .bar{display:flex; align-items:center; gap:7px; padding:12px 14px; border-bottom:1px solid var(--line); background:#0f2427}
+  .try .bar i{width:11px; height:11px; border-radius:50%; display:inline-block}
+  .try .bar i:nth-child(1){background:#ff5f57}.try .bar i:nth-child(2){background:#febc2e}.try .bar i:nth-child(3){background:#28c840}
+  .try .bar span{margin-left:10px; color:var(--muted); font-size:13px}
+  .panes{display:grid; grid-template-columns:1fr 1fr}
+  .pane{padding:18px 20px}
+  .pane + .pane{border-left:1px solid var(--line)}
+  .pane label{display:block; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:8px}
+  #roman{width:100%; min-height:120px; resize:vertical; background:transparent; border:0; color:var(--text);
+         font:18px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; outline:none; padding:0}
+  #roman::placeholder{color:#5f8783}
+  #myanmar{min-height:120px; font-size:26px; line-height:1.9; white-space:pre-wrap; word-break:break-word}
+  #myanmar:empty::before{content:"မြန်မာ စာ ဒီမှာ ပေါ်မယ်"; color:#5f8783}
+  .try .foot{display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:12px 16px; border-top:1px solid var(--line); background:#10272a}
+  .chip{background:var(--chip); color:var(--text); border:1px solid var(--line); border-radius:999px; padding:5px 12px; font:14px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; cursor:pointer}
+  .chip:hover{border-color:var(--brand2)}
+  .try .foot .spacer{flex:1}
+  #copy{padding:7px 14px; font-size:14px; border-radius:9px}
+
+  section{padding:50px 0}
+  h2{font-size:clamp(24px,3.4vw,32px); text-align:center; margin:0 0 8px}
+  .lead{color:var(--muted); text-align:center; max-width:640px; margin:0 auto 30px}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(205px,1fr)); gap:16px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px}
+  .feat .ico{font-size:24px}
+  .feat h3{margin:10px 0 6px; font-size:17px}
+  .feat p{margin:0; color:var(--muted); font-size:15px}
+
+  .sheet{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:16px}
+  .rule{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px}
+  .rule h3{margin:0 0 4px; font-size:16px}
+  .rule p{margin:0 0 12px; color:var(--muted); font-size:14px}
+  .pairs{display:flex; flex-wrap:wrap; gap:8px}
+  .pair{display:inline-flex; align-items:baseline; gap:8px; background:var(--chip); border-radius:10px; padding:6px 10px}
+  .pair .r{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--muted); font-size:14px}
+  .pair .d{font-size:20px; font-family:"Myanmar Text","Noto Sans Myanmar",Padauk,sans-serif}
+
+  .dl{display:grid; grid-template-columns:1fr; gap:16px; text-align:left; max-width:520px; margin:0 auto}
+  .dl .feat{display:flex; flex-direction:column}
+  .dl ol{margin:10px 0 0; padding-left:20px; color:var(--muted); font-size:15px}
+  .dl ol li{margin:4px 0}
+  .dl .btns{margin-top:auto; padding-top:16px; display:flex; gap:10px; flex-wrap:wrap}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13px; background:var(--chip); padding:2px 6px; border-radius:6px; color:var(--text)}
+
+  .faq{max-width:760px; margin:0 auto}
+  details{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:0 18px; margin:10px 0}
+  summary{cursor:pointer; padding:16px 0; font-weight:600; list-style:none; display:flex; justify-content:space-between; gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+"; color:var(--brand2); font-size:20px; line-height:1}
+  details[open] summary::after{content:"−"}
+  details p{margin:0 0 16px; color:var(--muted)}
+
+  .support{max-width:540px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:30px; text-align:center}
+  .support .amt{font-size:30px; font-weight:800}
+  .support .per{color:var(--muted)}
+  .support ul{list-style:none; padding:0; margin:18px 0 22px; text-align:left; display:inline-block}
+  .support li{margin:8px 0}
+  .support li::before{content:"✓ "; color:var(--good); font-weight:700}
+
+  footer{border-top:1px solid var(--line); padding:30px 0 50px; color:var(--muted); font-size:14px; text-align:center}
+
+  @media (max-width:640px){
+    .panes{grid-template-columns:1fr}
+    .pane + .pane{border-left:0; border-top:1px solid var(--line)}
+    #roman,#myanmar{min-height:80px}
+    nav{gap:14px}
+  }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#"><img src="logo.png" alt="" /> <span><span class="my">မြန်မာ</span> Keyboard<small>Phonetic Burmese for Windows</small></span></a>
+    <nav>
+      <a href="#try">Try it</a>
+      <a href="#how">How to type</a>
+      <a href="#download">Download</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="badge">Windows 10 &amp; 11 · Myanmar Unicode</div>
+    <h1>Type Burmese by spelling it <span class="accent">the way it sounds</span></h1>
+    <p class="sub">A phonetic (Romanized) Myanmar keyboard. Type <b>mrnmaa</b> and get <b class="my">မြန်မာ</b> — in any app, with word suggestions and no special layout to memorize.</p>
+    <div class="cta-row">
+      <a class="cta" href="https://github.com/mechya/myanmar_keyboard_release/releases/latest">⬇ Download for Windows</a>
+      <a class="cta secondary" href="#try">Try it here</a>
+    </div>
+    <div class="tiny">Free · No ads · Runs entirely on your PC</div>
+
+    <div class="try" id="try">
+      <div class="bar"><i></i><i></i><i></i><span>Try it — type Romanized Burmese below</span></div>
+      <div class="panes">
+        <div class="pane">
+          <label for="roman">You type</label>
+          <textarea id="roman" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="mang;_galaapaa"></textarea>
+        </div>
+        <div class="pane">
+          <label>You get</label>
+          <div id="myanmar" class="my" aria-live="polite" lang="my"></div>
+        </div>
+      </div>
+      <div class="foot">
+        <button class="chip" type="button" data-say="mang;_galaapaa">mang;_galaapaa</button>
+        <button class="chip" type="button" data-say="mrnmaa">mrnmaa</button>
+        <button class="chip" type="button" data-say="kye:juu:tangpaatay//">kye:juu:tangpaatay//</button>
+        <button class="chip" type="button" data-say="2025">2025</button>
+        <span class="spacer"></span>
+        <button class="cta small secondary" id="copy" type="button">Copy Myanmar</button>
+      </div>
+    </div>
+    <p class="tiny">This box uses the same rules as the keyboard. The real keyboard also suggests whole words as you type.</p>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Everything you need to write Burmese</h2>
+    <p class="lead">Built to feel natural for anyone who already types in English.</p>
+    <div class="grid">
+      <div class="feat"><div class="ico">⌨️</div><h3>Phonetic Romanized input</h3><p>Spell Burmese words in English letters and they turn into Myanmar script as you type.</p></div>
+      <div class="feat"><div class="ico">📲</div><h3>Works system-wide</h3><p>Types directly into any app — Word, browsers, Facebook, chat and email.</p></div>
+      <div class="feat"><div class="ico">💡</div><h3>Smart suggestions</h3><p>A word list helps you pick the right spelling, and learns the words you use most.</p></div>
+      <div class="feat"><div class="ico">🅤</div><h3>Standard Unicode</h3><p>Always real Myanmar Unicode — never Zawgyi — so your text shows correctly everywhere.</p></div>
+      <div class="feat"><div class="ico">🗺️</div><h3>Built-in key chart</h3><p>See every letter, vowel sign, medial and tone mark — and click to insert it.</p></div>
+      <div class="feat"><div class="ico">😀</div><h3>Emoji &amp; stickers</h3><p>Optional emoji beside matching words, plus animated emoji and sticker palettes.</p></div>
+      <div class="feat"><div class="ico">🔒</div><h3>Private by design</h3><p>Runs fully on your PC. No keystrokes, usage data or personal information are sent anywhere.</p></div>
+      <div class="feat"><div class="ico">🎁</div><h3>Free, all of it</h3><p>Every feature unlocked for everyone. No ads, no account, no reminders.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How to type — the scheme on one page</h2>
+    <p class="lead">A few simple rules cover almost everything. Type any of these in the box above to see them work.</p>
+    <div class="sheet">
+      <div class="rule">
+        <h3>Consonants — add “h” for the breathy sound</h3>
+        <p>Every consonant has a fixed key; a trailing <b>h</b> makes it aspirated.</p>
+        <div class="pairs">
+          <span class="pair"><span class="r">k</span><span class="d">က</span></span><span class="pair"><span class="r">kh</span><span class="d">ခ</span></span>
+          <span class="pair"><span class="r">t</span><span class="d">တ</span></span><span class="pair"><span class="r">th</span><span class="d">ထ</span></span>
+          <span class="pair"><span class="r">p</span><span class="d">ပ</span></span><span class="pair"><span class="r">ph</span><span class="d">ဖ</span></span>
+          <span class="pair"><span class="r">c</span><span class="d">စ</span></span><span class="pair"><span class="r">s</span><span class="d">သ</span></span>
+        </div>
+      </div>
+      <div class="rule">
+        <h3>Double the vowel to make it long</h3>
+        <p>One letter is the short vowel, two letters the long one.</p>
+        <div class="pairs">
+          <span class="pair"><span class="r">kaa</span><span class="d">ကာ</span></span><span class="pair"><span class="r">paa</span><span class="d">ပါ</span></span>
+          <span class="pair"><span class="r">ki</span><span class="d">ကိ</span></span><span class="pair"><span class="r">kii</span><span class="d">ကီ</span></span>
+          <span class="pair"><span class="r">ku</span><span class="d">ကု</span></span><span class="pair"><span class="r">kuu</span><span class="d">ကူ</span></span>
+          <span class="pair"><span class="r">ke</span><span class="d">ကေ</span></span><span class="pair"><span class="r">ko</span><span class="d">ကို</span></span>
+        </div>
+      </div>
+      <div class="rule">
+        <h3>Medials follow the consonant</h3>
+        <p><b>y r w h</b> straight after a consonant become ျ ြ ွ ှ.</p>
+        <div class="pairs">
+          <span class="pair"><span class="r">kya</span><span class="d">ကျ</span></span>
+          <span class="pair"><span class="r">kra</span><span class="d">ကြ</span></span>
+          <span class="pair"><span class="r">kwa</span><span class="d">ကွ</span></span>
+          <span class="pair"><span class="r">mha</span><span class="d">မှ</span></span>
+        </div>
+      </div>
+      <div class="rule">
+        <h3>Final consonants get the asat by themselves</h3>
+        <p>A consonant that ends a syllable gets ်  automatically.</p>
+        <div class="pairs">
+          <span class="pair"><span class="r">kan</span><span class="d">ကန်</span></span>
+          <span class="pair"><span class="r">im</span><span class="d">အိမ်</span></span>
+          <span class="pair"><span class="r">mrnmaa</span><span class="d">မြန်မာ</span></span>
+        </div>
+      </div>
+      <div class="rule">
+        <h3>Tones &amp; signs</h3>
+        <p><b>.</b> → ့ · <b>:</b> or <b>x</b> → း · <b>q</b> or <b>M</b> → ံ · <b>_</b> stacks the next letter</p>
+        <div class="pairs">
+          <span class="pair"><span class="r">mii:</span><span class="d">မီး</span></span>
+          <span class="pair"><span class="r">ngaa.</span><span class="d">ငါ့</span></span>
+          <span class="pair"><span class="r">kaq</span><span class="d">ကံ</span></span>
+          <span class="pair"><span class="r">mang;_galaa</span><span class="d">မင်္ဂလာ</span></span>
+        </div>
+      </div>
+      <div class="rule">
+        <h3>Capitals for the Pali letters, and punctuation</h3>
+        <p><b>T Th D Dh N L</b> → ဋ ဌ ဍ ဎ ဏ ဠ · <b>/</b> → ၊ · <b>//</b> → ။</p>
+        <div class="pairs">
+          <span class="pair"><span class="r">Ta</span><span class="d">ဋ</span></span>
+          <span class="pair"><span class="r">Na</span><span class="d">ဏ</span></span>
+          <span class="pair"><span class="r">/</span><span class="d">၊</span></span>
+          <span class="pair"><span class="r">//</span><span class="d">။</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <h2>Download — free</h2>
+    <p class="lead">Install, then press Win + Space to switch to the Myanmar keyboard.</p>
+
+    <div class="dl">
+      <div class="feat">
+        <div class="ico">🪟</div>
+        <h3>Windows 10 &amp; 11</h3>
+        <ol>
+          <li>Download the installer (<b>MyanmarKeyboard-Setup-….exe</b>) from the latest release and run it.</li>
+          <li>Press <b>Win + Space</b> and pick <b>Myanmar Phonetic (Romanized)</b>.</li>
+          <li>Type! <b>Space</b> picks a suggestion, <b>Enter</b> commits, <b>Alt + `</b> switches to English.</li>
+        </ol>
+        <div class="btns"><a class="cta small" href="https://github.com/mechya/myanmar_keyboard_release/releases/latest">⬇ Windows installer</a></div>
+      </div>
+    </div>
+
+    <p class="tiny" style="text-align:center">Something not working? <a href="https://github.com/mechya/myanmar_keyboard_release/issues">Report it on GitHub</a>.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <p class="lead">The things people ask most.</p>
+    <div class="faq">
+      <details>
+        <summary>Is it really free?</summary>
+        <p>Yes. Every feature works for everyone, with no ads, no account and no reminders. If you want to say thanks you can buy me a coffee — it changes nothing in the app.</p>
+      </details>
+      <details>
+        <summary>Does it send what I type anywhere?</summary>
+        <p>No. The conversion and the word suggestions run on your PC. The app checks GitHub for a newer version once a day; that only asks for the latest version number, and you can turn it off in the app.</p>
+      </details>
+      <details>
+        <summary>Is the output Unicode or Zawgyi?</summary>
+        <p>Always standard Myanmar Unicode, so it displays correctly on modern phones, browsers and Office.</p>
+      </details>
+      <details>
+        <summary>Windows warns “Windows protected your PC” when I run the installer.</summary>
+        <p>That is SmartScreen showing a warning for a new download from a small independent developer. Click <b>More info → Run anyway</b>.</p>
+      </details>
+      <details>
+        <summary>Why doesn't Space add a space after a word?</summary>
+        <p>Burmese is written without spaces between words, so the keyboard never adds one by itself. While you type a word, Space picks a suggestion and Enter commits it; when nothing is being typed, Space types a normal space.</p>
+      </details>
+      <details>
+        <summary>Can I have both this and the Nepali keyboard?</summary>
+        <p>Yes — they're separate keyboards and can be installed side by side.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="support">
+  <div class="wrap">
+    <h2>Free for everyone</h2>
+    <p class="lead">This isn't a product with a paywall. It's a small tool so anyone can write Burmese on their PC.</p>
+    <div class="support">
+      <div class="amt">☕</div>
+      <div class="per">Everything is free and every feature is unlocked. If it helps you and you'd like to chip in, you can buy me a coffee.</div>
+      <ul>
+        <li>All features free — nothing is ever locked</li>
+        <li>No ads, no tracking, no account needed</li>
+        <li>No reminders, whether you donate or not</li>
+        <li>Can't pay? Sharing it with friends helps just as much</li>
+      </ul>
+      <div class="cta-row">
+        <a class="cta" href="#download">Get the keyboard</a>
+        <a class="cta secondary" href="https://buymeacoffee.com/gurung.bhupesh" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Myanmar Keyboard — phonetic (Romanized) Burmese input for Windows.<br/>
+    Questions? <a href="https://github.com/mechya/myanmar_keyboard_release/issues">Open an issue</a>.
+    Enjoying it? <a href="https://buymeacoffee.com/gurung.bhupesh" target="_blank" rel="noopener">☕ Buy me a coffee</a>.<br/>
+    Animated emoji © Google — Noto Animated Emoji, used under CC BY 4.0.
+  </div>
+</footer>
+
+<script src="translit.js"></script>
+<script>
+(function () {
+  var roman = document.getElementById("roman");
+  var out = document.getElementById("myanmar");
+  function render() { out.textContent = MyanmarTranslit.transliterate(roman.value, true); }
+  roman.addEventListener("input", render);
+  document.querySelectorAll("[data-say]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      roman.value = b.getAttribute("data-say");
+      render();
+      roman.focus();
+    });
+  });
+  var copy = document.getElementById("copy");
+  copy.addEventListener("click", function () {
+    if (!out.textContent || !navigator.clipboard) return;
+    navigator.clipboard.writeText(out.textContent).then(function () {
+      copy.textContent = "Copied ✓";
+      setTimeout(function () { copy.textContent = "Copy Myanmar"; }, 1500);
+    });
+  });
+})();
+</script>
+</body>
+</html>
